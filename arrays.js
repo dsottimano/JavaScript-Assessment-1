@@ -2,6 +2,8 @@
 
 var contacts = [];
 
+console.log(contacts.length)
+
 
 //2. Add the following people to the contacts array.
 
@@ -37,5 +39,27 @@ var stefan = {
 };
 
 
-//3. Woops after adding all of those people to the same contacts list you realized you need a list just the mentors. Create a new variable named mentors populate it using contacts array. 
+function addPeople (arr) {
+
+arr.push(jake,matt,chris,tony,andrew,stefan)
+
+console.log(arr)
+}
+
+addPeople(contacts)
+
+//3. Woops after adding all of those people to the same contacts list you realized you need a list just the mentors. 
+//Create a new variable named mentors populate it using contacts array.
+
+var mentors = []
+
+function addMentors (arr) {
+
+arr.push(jake,matt)
+
+console.log(arr)
+}
+
+addMentors(mentors)
+
 

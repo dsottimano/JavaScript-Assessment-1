@@ -1,6 +1,8 @@
-/*Imagine you work for Crayola and your boss just told you that the Crayola1990 API needs to have a url slug generated for all of the colors names.
+/*Imagine you work for Crayola and your boss just told you that the Crayola1990
+// API needs to have a url slug generated for all of the colors names.
 * To do this you need to lowercase and hyphenate each color in the following array.
-* You can not edit the values in the array by hand as your boss is wanting a loop that can be applied to any set of crayola boxes in the future
+* You can not edit the values in the array by hand as your boss is wanting a loop that can be applied to 
+//any set of crayola boxes in the future
 */
 var crayola1990 = [
 	'Scarlet',
@@ -58,7 +60,24 @@ var crayola1990 = [
 	'Antique Brass'
 ];
 
-//create a loop that will iterate over each item in the array and then use the String methods to modify the value at the current position in the array
+
+function makeSlugs (box) {
+
+var slugContainer = []
+var slugMaker = ''
+for (var i = 0; i < box.length; i++) {
+	var element = box[i];
+	slugMaker = element.split(' ').join('-').toLowerCase()
+	slugContainer.push({name: element, slug: slugMaker})	
+	
+}
+
+console.log(slugContainer)
+
+}
+makeSlugs (crayola1990)
+//create a loop that will iterate over each item in the array and then use the String methods to 
+//modify the value at the current position in the array
 
 /***** HINTS *******
  * remember strings are immutable but the value of a variable can be adjusted as often as needed.
